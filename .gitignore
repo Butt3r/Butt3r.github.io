@@ -1,55 +1,10 @@
-### Jekyll ###
-_site/
-.sass-cache/
+_site
+.DS_Store
+.jekyll
 .jekyll-metadata
-.jekyll-cache
+.bundle
+.sass-cache
+Gemfile
 Gemfile.lock
-*.gem
-
-### Gulp ###
+node_modules
 package.json
-/node_modules/
-
-
-### Atom ###
-.ftpconfig
-.sftpconfig
-
-
-### Compiled Source ###
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-
-
-### Compressed Packages ###
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-
-
-### Logs and Databases ###
-*.log
-*.sql
-*.sqlite
-
-
-### Windows ###
-Thumbs.db
-ehthumbs.db
-ehthumbs_vista.db
-Desktop.ini
-$RECYCLE.BIN/
-*.cab
-*.msi
-*.msm
-*.msp
-*.lnk
