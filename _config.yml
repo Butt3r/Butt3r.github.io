@@ -1,6 +1,6 @@
 name: MOONCAKE
 description: to boldly go where no one has gone before
-meta_description: " "
+meta_description: " hello..? "
 markdown: kramdown
 highlighter: pygments
 logo: false
@@ -12,4 +12,4 @@ gems: [jekyll-paginate]
 
 # Details for the RSS feed generator
 url: https://butt3r.github.io
-author: pinenut
+author: pinenutz
