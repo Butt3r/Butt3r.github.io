@@ -1,12 +1,3 @@
----
-
-layout: post title: "첫 페이지" date: 2020-01-31 21:20:00
-
-categories: Thriller Comedy Horror
-----------------------------------
-
----
-
 **hello** world!
 
 힘들다 쉽지않구나 jekyll!
