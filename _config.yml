@@ -14,7 +14,7 @@ short_url: 'https://butt3r.github.io/'
 google_analytics: UA-69281367-1
 disqus: username
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /jasper/
+baseurl: /
 
 # Permalinks
 permalink: /:title
@@ -45,8 +45,8 @@ plugins: [jekyll-paginate]
 # or "master" otherwise
 safe: false
 lsi: false
-username: jekyller
-repo: jasper
+username: https://github.com/Butt3r/Butt3r.github.io.git
+repo: Butt3r.github.io
 branch: master
 relative_source: ../jasper/
 destination: ../jasper-pages/
