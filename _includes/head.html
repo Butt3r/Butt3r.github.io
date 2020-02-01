@@ -1,66 +1,45 @@
-<!doctype html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
-<meta charset="utf-8">
-<title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
-<meta name="description" content="{{ page.description }}">
-<meta name="keywords" content="{{ page.tags | join: ', ' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Favicon-->
+  <link rel="shortcut icon" href="{{ site.baseurl }}/{{ site.theme_settings.favicon }}" type="image/x-icon">
 
-{% include graphs.html %}
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
+    integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
 
-<link href="{{ site.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+  <!-- Spoqa Han Sans -->
+  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
 
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
-<!-- Type -->
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic" rel='stylesheet' type='text/css' />
-<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{{ site.url }}/assets/css/entypo.css" media="all">
+  <!-- OG Tag -->
+  {% if page.title %}
+  {% assign title = site.theme_settings.title | append: "-" | append: page.title %}
+  {% else %}
+  {% assign title = site.theme_settings.title %}
+  {% endif %}
+  <meta name="title" content="{{ title }}" />
+  <meta name="author" content="{{ site.theme_settings.profile.username }}" />
+  <meta name="keywords" content="{{ page.tags | join: ',' }}" />
+  <meta name="description" content="{{ page.subtitle }}" />
+  <meta name="robots" content="index,follow" />
 
-<!-- In order to use Calendas Plus, you must first purchase it. Then, create a font-face package using FontSquirrel.
-<link rel='stylesheet' href='{{ site.url }}/assets/cal.css' media='all' />
--->
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:description" content="{{ page.subtitle }}" />
+  <meta property="og:type" content="website, blog" />
+  <meta property="og:image"
+    content="{{ site.url }}/{% if page.image %}{{ page.image }}{% else %}{{ site.theme_settings.profile.image }}{% endif %}" />
+  <meta property="og:site_name" content="{{ site.theme_settings.title }}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ title }}" />
+  <meta name="twitter:description" content="{{ page.subtitle }}" />
+  <meta name="twitter:image"
+    content="{{ site.url }}/{% if page.image %}{{ page.image }}{% else %}{{ site.theme_settings.profile.image }}{% endif %}" />
 
-
-<!-- For all browsers -->
-<link rel="stylesheet" href="{{ site.url }}/assets/css/i.css">
-
-<!-- Fresh Squeezed jQuery -->
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-
-<meta http-equiv="cleartype" content="on">
-
-<!-- Load Modernizr -->
-<script src="{{ site.url }}/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
-
-
-<!-- Icons -->
-<!-- 16x16 -->
-<link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
-
-<div id="bump">
-  <body class="">
-    <header class="site-header">
-      <div class="wrap">
-        <hgroup>
-          <h1><a href="/">{{ site.title }}</a></h1>
-        </hgroup>
-        <a href="#nav" class="menu"><span class='icons'>☰</span></a>
-        <nav role="navigation">
-          <ul>
-            <li>
-              <a href="/" title="{{ site.title }}">Home</a>
-            </li>
-            
-            {% for link in site.links %}
-                <li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
-            {% endfor %}
-
-          </ul>
-        </nav>
-      </div>
-    </header>
+  <title>{{ title }}</title>
+</head>

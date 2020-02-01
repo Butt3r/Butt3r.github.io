@@ -1,67 +1,49 @@
-title:            MOONCAKE
-tagline:          to boldly go where no man has goghed before
-description:     art + tech
-canonical: https://butt3r.github.io/
+# Site Settings
+baseurl: ""
+url : "https://naye0ng.github.io"
 
-# Owner/author information
-owner:
-  name:          butter
-  avatar:         avatar.png
-  bio:            "fine art"
-  email:          fargo95@naver.com
-  twitter:        " "
-  github:         " "
-  instagram:      " "
-  dribbble:       " "
-  disqus:        " "
-  location:       "Korea"
-  # Plug in your disqus shortname!
+# Blog Settings
+theme_settings :
+  title : Grape Theme
+  favicon : assets/favicon.ico
 
-tools:
-  standards:      "learning new things all the time."
-  software:       "git"
+  # Profile Settings
+  profile :
+    image : assets/img/smile.png
+    username : Nayeong Kim
+    description : creator of Grape-Theme! Grape-Theme is my first jekyll theme and you can customize this theme easily.
+    experience :
+      - start : 2017-05-03
+        end : 2018-05-06
+        experience : company name, title
+    skills : 
+      - skill : HTML5 & CSS
+        value : 85  # Percent value
+        
+  # Icons
+  icons :
+    email:  # Full email address, e.g. "sample@google.com"
+    linkedin:  # Full URL 
+    github: naye0ng
+    gitlab: 
+    bitbucket: 
+    google_plus:
+    twitter:
+    youtube:
+    facebook:
+    instagram:
 
-# Open Graph customization
-opengraph:
-  locale:           en_US
+  # Disqus
+  disqus_shortname :
 
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: About
-    url: /about
-  - title: Github
-    url: https://github.com/Butt3r
-    external: true
-  - title: Who?
-    url: https://github.com/Butt3r
-    external: true
+# Pagination
+paginate: 5
+paginate_path: "blog/page:num"
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Asia/Seoul
-future:      true
-highlighter: pygments
-markdown:    kramdown
-
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
-
-  coderay:
-    coderay_line_numbers:
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
-
+# Build Ssttings
 sass:
-    style: :compressed
-
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
+  sass_dir: _sass
+  style: :compressed
+gems: [jekyll-paginate]
+bootstrap:
+  assets: true
