@@ -1,38 +1,67 @@
-# Site settings
-title: MOONCAKE
-description: "to boldly go where no man has gone before."
-url: "https://butt3r.github.io/butt3r"
-author:
-  name: "butt3r"
-  email: "oos9596@gmail.com"
-  url: "https://butt3r.github.io/"
+title:            MOONCAKE
+tagline:          to boldly go where no man has goghed before
+description:     art + tech
+canonical: https://butt3r.github.io/
 
-# Build settings
-baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
-markdown: kramdown
-source: .
-destination: ./_site
-permalink: /:title
-paginate: 8
-paginate_path: /page:num/
+# Owner/author information
+owner:
+  name:          butter
+  avatar:         avatar.png
+  bio:            "fine art"
+  email:          fargo95@naver.com
+  twitter:        " "
+  github:         " "
+  instagram:      " "
+  dribbble:       " "
+  disqus:        " "
+  location:       "Korea"
+  # Plug in your disqus shortname!
 
-# Default values
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+tools:
+  standards:      "learning new things all the time."
+  software:       "git"
 
-# Plugins
-gems:
-  - jekyll-paginate
+# Open Graph customization
+opengraph:
+  locale:           en_US
 
-# Custom variables
-version: "1.1.0"
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: About
+    url: /about
+  - title: Github
+    url: https://github.com/Butt3r
+    external: true
+  - title: Who?
+    url: https://github.com/Butt3r
+    external: true
 
-# Options
-custom_header: true
-custom_nav_footer: false
-reverse: false
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    Asia/Seoul
+future:      true
+highlighter: pygments
+markdown:    kramdown
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+  coderay:
+    coderay_line_numbers:
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+sass:
+    style: :compressed
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
