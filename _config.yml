@@ -12,7 +12,7 @@ description: "to boldly go where no man has gone before."
 
 short_url: 'https://butt3r.github.io/'
 google_analytics: UA-69281367-1
-disqus: username
+disqus: pinenuts
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
 baseurl: /
 
@@ -45,7 +45,7 @@ plugins: [jekyll-paginate]
 # or "master" otherwise
 safe: false
 lsi: false
-username: https://github.com/Butt3r/Butt3r.github.io.git
+username: Butt3r
 repo: Butt3r.github.io
 branch: master
 relative_source: ../jasper/
